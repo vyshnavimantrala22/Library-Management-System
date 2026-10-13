@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Page</title>
+</head>
+<body>
+    <h1>Admin Page</h1>
+
+    <input type="text" id="book" placeholder="Enter book name">
+    <button onclick="addBook()">Add Book</button>
+
+    <p id="message"></p>
+
+    <a href="index.html">Home</a>
+
+    <script>
+        function addBook() {
+            let book = document.getElementById("book").value;
+            localStorage.setItem("book", book);
+            document.getElementById("message").innerText = "Book added";
+        }
+    </script>
+</body>
+</html>
